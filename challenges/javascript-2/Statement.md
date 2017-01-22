@@ -1,21 +1,39 @@
 # Javascript challenge : compute the price
 
-An online commercial website wants you to compute the total price of a shopping cart.
-The details of the cart is provided as a string.
-Example : `Jam, 4€; Salad cost 0.89; carrots, 3.4 ; black chocolate for 2.01`
-* the example above should produce `10.30`
-* an empty cart should produce `0`
+Uber wants you to develop an app to optimise the Uber best option, depending on the distance and the maximum cost.
+There are 5 types of Uber : UberX, UberXL, UberPlus, UberBlack, UberSUV
+
+The price by kilometer of each type is
+
+ | Type | Price for 1 km |
+ |---|---|
+ | UberX | 0.3€ |
+ | UberXL | 0.5€ |
+ | UberPlus | 0.7€ |
+ | UberBlack | 1€ |
+ | UberSUV | 1.3€ |
+ 
+Your job is, for a given distance (in km) and maximum price, choose the Uber type that fits the requirements
+ * the final price should be lower than or equals to (<=) the maximum price
+ * the price should be as high as possible
+ 
+Example : `distance = 30km` and `maximumPrice = 20€`,
+
+ | Type | Total Price |
+ |---|---|
+ | UberX | 9€ |
+ | UberXL | 15€ |
+ | UberPlus | 21€ |
+ | UberBlack | 30€ |
+ | UberSUV | 39€ |
+ 
+ The choice should be `UberXL`
  
 ## Implementation
-Open price.js, the function to implement is `computePrice()`.
-You can suppose that
-* the list can only be a string
-* the € sign is optional
-* the price can be a integer or a decimal number
-* the decimal sign is always `.`
-* the product separator is always `;`
+Open price.js, the function to implement is `whichUber(distance, maximumPrice)`.
+
  
 ## To run your code
  ```
- > node price.js
+ > node uber.js
  ```
